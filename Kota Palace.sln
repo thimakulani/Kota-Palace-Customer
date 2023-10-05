@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kota Palace", "Kota Palace\Kota Palace.csproj", "{2BEF9BFD-4C09-419E-A4A6-6E8E71DB92FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BEF9BFD-4C09-419E-A4A6-6E8E71DB92FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BEF9BFD-4C09-419E-A4A6-6E8E71DB92FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BEF9BFD-4C09-419E-A4A6-6E8E71DB92FB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2BEF9BFD-4C09-419E-A4A6-6E8E71DB92FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BEF9BFD-4C09-419E-A4A6-6E8E71DB92FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BEF9BFD-4C09-419E-A4A6-6E8E71DB92FB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE3E0504-D014-4840-82BD-82CB3B5775F4}
+	EndGlobalSection
+EndGlobal

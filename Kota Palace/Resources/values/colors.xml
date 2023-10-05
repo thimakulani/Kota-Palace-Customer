@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5f6caf</color>
+    <color name="colorPrimaryDark">#2e3973</color>
+    <color name="colorAccent">#5e92f3</color>
+  <color name="colorPink">#c9788f</color>
+  <color name="colorBlue">#2d3491</color>
+  <color name="colorRed">#DD2C00</color>
+  <color name="colorPurplr">#6200EA</color>
+  <color name="colorMeroon">#880E4F</color>
+  <color name="colorThemeColor" >#5f6caf</color>
+  <color name="shimmer_background_color">#b1b1b1</color>
+</resources>

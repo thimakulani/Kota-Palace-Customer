@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/view_style_2"
+>
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:id="@+id/appBarLayout1"
+        android:background="@color/float_transparent"
+    >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:id="@+id/cartToolBar"
+            android:layout_height="?android:attr/actionBarSize"
+        />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/appBarLayout1"
+        android:layout_height="match_parent"
+        android:id="@+id/RecyclerCart"
+        android:layout_above="@+id/checkout"
+
+    />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkout"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        tools:ignore="HardcodedSize"
+    >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/card_style"
+        
+    >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_total_price"
+                android:layout_margin="10dp"
+                android:layout_centerVertical="true"
+                tools:ignore="HardcodedSize" 
+            />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_check_out"
+                android:layout_margin="10dp"
+                android:id="@+id/btn_check_out"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/txt_total_price"
+            />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
