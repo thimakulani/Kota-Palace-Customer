@@ -57,6 +57,7 @@
                 android:layout_height="20dp"
                 android:id="@+id/load_progress"
                 android:layout_centerVertical="true"
+				android:visibility="gone"
                 />
              <androidx.appcompat.widget.AppCompatImageView
                  android:layout_width="20dp"

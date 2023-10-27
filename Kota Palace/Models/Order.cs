@@ -14,7 +14,7 @@ namespace Kota_Palace.Models
     public class Order
     {
         public int Id { get; set; }
-        public string Customer_Id { get; set; }
+        public string CustomerId { get; set; }
         public string Status { get; set; }
         public int BusinessId { get; set; }
         public virtual ICollection<OrderItems> OrderItems { get; set; }

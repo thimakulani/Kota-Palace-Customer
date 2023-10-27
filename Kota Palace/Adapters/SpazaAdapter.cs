@@ -44,13 +44,14 @@ namespace Kota_Palace.Adapters
             // Replace the contents of the view with that element
             var holder = viewHolder as ShopsAdapterViewHolder;
             holder.TxtName.Text = Items[position].Name.ToUpper();
-            if (Items[position].Online == "Online")
+            if (Items[position].Online == "ONLINE")
             {
                 holder.TxtDescription.Text = Items[position].Online.ToUpper();
             }
             else
             {
-                holder.TxtDescription.Text = "Offline".ToUpper();
+                holder.ItemView.Enabled = false;
+                holder.TxtDescription.Text = "OFFLINE".ToUpper();
             }
             if (!string.IsNullOrEmpty(Items[position].ImgUrl))
             {

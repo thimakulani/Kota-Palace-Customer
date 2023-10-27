@@ -27,14 +27,14 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/order_id"
         />
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/order_item_name"
             android:layout_alignParentEnd="true"
@@ -44,7 +44,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_below="@+id/order_item_name"
             android:text="@string/quantity"
@@ -52,7 +52,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/order_item_quantity"
             android:layout_below="@+id/order_item_name"
@@ -62,7 +62,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_below="@+id/order_item_quantity"
             android:text="@string/item_price"
@@ -71,7 +71,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:id="@+id/order_item_total_price"
             android:layout_below="@+id/order_item_quantity"

@@ -4,6 +4,7 @@
     {
         //public static string ApiUrl = @"https://kota-palace-api.herokuapp.com/api";
         //public static string ApiUrl = "https://bsite.net/thimakulani/api";
-        public static string ApiUrl = "https://sigauquetk.bsite.net/api";
+       // public static string ApiUrl = "https://sigauquetk.bsite.net/api";
+        public static string ApiUrl = "https://kotapalaceadmin.azurewebsites.net/api";
     }
 }

@@ -160,7 +160,7 @@ namespace Kota_Palace.Dialogs
                 else
                 {
                     var result = await response.Content.ReadAsStringAsync();
-                    AndHUD.Shared.ShowError(context, $"Something went wrong \n {result}".ToUpper(), MaskType.Clear, TimeSpan.FromSeconds(3));
+                    AndHUD.Shared.ShowSuccess(context, $"YOU CART IS EMPTY", MaskType.Clear, TimeSpan.FromSeconds(3));
                     Btn_check_out.Enabled = false;
                 }
 
@@ -264,7 +264,7 @@ namespace Kota_Palace.Dialogs
                 Order order = new Order()
                 {
                     BusinessId = Items[0].BusinessId,
-                    Customer_Id = Preferences.Get("Id", ""),
+                    CustomerId = Preferences.Get("Id", ""),
                     OrderItems = orderItems,
                     Status = "Pending",
                     OrderDateUtc = DateTime.UtcNow,
