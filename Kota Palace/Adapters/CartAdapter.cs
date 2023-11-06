@@ -9,6 +9,7 @@ using Google.Android.Material.Chip;
 using Google.Android.Material.Internal;
 using Google.Android.Material.TextView;
 using Kota_Palace.Models;
+using Microsoft.AspNetCore.SignalR.Client;
 using Plugin.CloudFirestore;
 using System;
 using System.Collections.Generic;
@@ -23,10 +24,12 @@ namespace Kota_Palace.Adapters
         public event EventHandler<CartAdapterClickEventArgs> ItemLongClick;
         public event EventHandler<CartAdapterClickEventArgs> ItemOptionClick;
         private readonly List<CartModel> Items = new List<CartModel>();
+        
 
         public CartAdapter(List<CartModel> data)
         {
             Items = data;
+            
         }
 
         // Create new views (invoked by the layout manager)

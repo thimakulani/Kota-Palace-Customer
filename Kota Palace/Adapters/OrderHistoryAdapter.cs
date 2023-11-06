@@ -49,7 +49,7 @@ namespace Kota_Palace.Adapters
             {
                 Chip chip = new Chip(holder.ItemView.Context)
                 {
-                    Text = item.ItemName.ToUpper(),
+                    Text = $"{item.ItemName.ToUpper()}(*{item.Quantity})",
                     Checkable = false
                 };
                 price += (item.Price * item.Quantity);

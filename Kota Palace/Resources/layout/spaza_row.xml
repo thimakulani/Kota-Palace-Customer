@@ -8,9 +8,7 @@
     android:layout_margin="10dp"
     app:cardPreventCornerOverlap="true"
     android:transitionName="shared_element_container"
-    
-    
-    
+
 >
     <LinearLayout
         android:orientation="vertical"
@@ -43,14 +41,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/RowtxtDescription" 
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
         />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:visibility="gone"
         >
             <ProgressBar
                 android:layout_width="20dp"

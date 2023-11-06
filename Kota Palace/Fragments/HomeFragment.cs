@@ -63,7 +63,7 @@ namespace Kota_Palace.Fragments
         SpazaAdapter adapter;
         private async void GetBusiness()
         {
-            var currentLocation = await Geolocation.GetLocationAsync();
+            //var currentLocation = await Geolocation.GetLocationAsync();
             try
             {
                 HttpClient httpClient = new HttpClient();
@@ -100,8 +100,13 @@ namespace Kota_Palace.Fragments
                 }
 
             }
-            catch (Exception)
+            catch(HttpRequestException EX)
             {
+                AndHUD.Shared.ShowError(context, $"Something went wrong \n {EX.Message}", MaskType.Clear, TimeSpan.FromSeconds(3));
+            }
+            catch (Exception EX)
+            {
+                AndHUD.Shared.ShowError(context, $"Something went wrong \n {EX.Message}", MaskType.Clear, TimeSpan.FromSeconds(3));
 
 
             }
@@ -115,7 +120,7 @@ namespace Kota_Palace.Fragments
         async void ChangedData(SpazaAdapter adapter)
         {
 
-            await System.Threading.Tasks.Task.Delay(1000).ContinueWith(t =>
+            await Task.Delay(1000).ContinueWith(t =>
             {
                 adapter.NotifyDataSetChanged();
                 ChangedData(adapter);//This is for repeate every 5s.

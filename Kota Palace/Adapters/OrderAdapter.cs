@@ -4,6 +4,7 @@ using AndroidX.RecyclerView.Widget;
 using Google.Android.Material.Chip;
 using Google.Android.Material.TextView;
 using Kota_Palace.Models;
+using Microsoft.AspNetCore.SignalR.Client;
 using System;
 using System.Collections.Generic;
 
@@ -14,10 +15,11 @@ namespace Kota_Palace.Adapters
         public event EventHandler<OrderAdapterClickEventArgs> ItemClick;
         public event EventHandler<OrderAdapterClickEventArgs> ItemLongClick;
         private readonly List<Order> Orders = new List<Order>();
-
+        //private HubConnection hubConnection;
         public OrderAdapter(List<Order> data)
         {
             Orders = data;
+            
         }
 
         // Create new views (invoked by the layout manager)
@@ -35,7 +37,7 @@ namespace Kota_Palace.Adapters
         }
 
         // Replace the contents of a view (invoked by the layout manager)
-        public override void OnBindViewHolder(RecyclerView.ViewHolder viewHolder, int position)
+        public override  void OnBindViewHolder(RecyclerView.ViewHolder viewHolder, int position)
         {
             //var item = Orders[position];
 
@@ -50,16 +52,19 @@ namespace Kota_Palace.Adapters
                 var chip = inflator.Inflate(Resource.Layout.chip_item, null, false) as Chip;
 
                 chip.Clickable = false;
-                chip.Text = item.ItemName.ToUpper();
+                chip.Text = $"{item.ItemName.ToUpper()}(*{item.Quantity})" ;
                 price += (item.Price * item.Quantity);
                 holder.Items.AddView(chip);
             }
 
             //fill in your items
-            holder.Quantity.Text = $"{Orders[position].OrderItems.Count + 1}".ToUpper();
+            holder.Quantity.Text = $"{Orders[position].OrderItems.Count}".ToUpper();
             holder.Price.Text = $"R{price}".ToUpper();
             holder.Status.Text = $"{Orders[position].Status}".ToUpper();
             holder.ItemName.Text = $"{Orders[position].Id}".ToUpper();
+
+            
+
         }
 
         public override int ItemCount => Orders.Count;

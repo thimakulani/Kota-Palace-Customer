@@ -118,6 +118,7 @@ namespace Kota_Palace.Fragments
                 {
                     var str_resp = await response.Content.ReadAsStringAsync();
                     AndHUD.Shared.ShowSuccess(context, str_resp, MaskType.Black, TimeSpan.FromSeconds(2));
+                    ViewState(false);
                 }
                 else
                 {

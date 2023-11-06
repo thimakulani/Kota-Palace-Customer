@@ -176,7 +176,7 @@ namespace Kota_Palace.Dialogs
         private void OpenDialog()
         {
             int index = 0;
-            string[] options = { "DELIVER", "EAT-IN", "COLLECT" };
+            string[] options = { /*"DELIVER",*/ "EAT-IN", "COLLECTION" };
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
             builder.SetTitle("CONFIRM ORDER");
             builder.SetNegativeButton("CANCEL", delegate
@@ -189,20 +189,20 @@ namespace Kota_Palace.Dialogs
                 {
                     SelectedOption = options[index];
 
-                    if (index == 0)
+                    /*if (index == 0)
                     {
                         MapDialog mapDialog = new MapDialog();
                         mapDialog.Show(ChildFragmentManager.BeginTransaction(), "");
                         mapDialog.AddressChanged += MapDialog_AddressChanged;
-                    }
-                    else
-                    {
+                    }*/
+                    /*else
+                    {*/
                         ConfirmOrder();
-                    }
+                    //}
 
                 }
             });
-            builder.SetSingleChoiceItems(options, -1, (s, e) =>
+            builder.SetSingleChoiceItems(options, 0, (s, e) =>
             {
                 index = e.Which;
 
@@ -256,7 +256,7 @@ namespace Kota_Palace.Dialogs
                         ItemName = item.ItemName,
                         Price = item.Price,
                         Quantity = item.Quantity,
-
+                        
 
                     };
                     orderItems.Add(d);
@@ -309,10 +309,19 @@ namespace Kota_Palace.Dialogs
                     AndHUD.Shared.ShowError(context, str_results.ToUpper(), MaskType.Clear, TimeSpan.FromSeconds(3));
                 }
             }
+            catch(HttpRequestException ex)
+            {
+                AndHUD.Shared.ShowError(context, ex.Message.ToUpper(), MaskType.Clear, TimeSpan.FromSeconds(3));
+            }
+            catch (FirebaseMessagingException ex)
+            {
+                AndHUD.Shared.ShowError(context, ex.Message.ToUpper(), MaskType.Clear, TimeSpan.FromSeconds(3));
+            }
             catch (Exception EX)
             {
                 AndHUD.Shared.ShowError(context, EX.Message.ToUpper(), MaskType.Clear, TimeSpan.FromSeconds(3));
             }
+            
 
 
         }
