@@ -23,10 +23,10 @@ namespace Kota_Palace.Models
         {
             var intent = new Intent(this, typeof(HomeActivity));
             intent.AddFlags(ActivityFlags.ClearTop);
-            var pendingIntent = PendingIntent.GetActivity(this, 0 /* Request code */, intent, PendingIntentFlags.OneShot);
+            var pendingIntent = PendingIntent.GetActivity(this, 0 /* Request code */, intent, PendingIntentFlags.Immutable);
 
             var defaultSoundUri = RingtoneManager.GetDefaultUri(RingtoneType.Notification);
-            var notificationBuilder = new NotificationCompat.Builder(this,"100")
+            var notificationBuilder = new NotificationCompat.Builder(this, "100")
                 .SetSmallIcon(Resource.Drawable.app_icon_04_4544852)
                 .SetContentTitle(remoteMessage.GetNotification().Title)
                 .SetContentText(remoteMessage.GetNotification().Body)

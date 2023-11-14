@@ -3,11 +3,8 @@ using Android.Content;
 using Android.Gms.Ads;
 using Android.Gms.Ads.Initialization;
 using Android.OS;
-using Android.Runtime;
-using Android.Widget;
 using AndroidX.AppCompat.App;
-using AndroidX.AppCompat.Widget;
-using AndroidX.Fragment.App;
+using Firebase.Messaging;
 using Google.Android.Material.AppBar;
 using IsmaelDiVita.ChipNavigationLib;
 using Kota_Palace.Activities;
@@ -37,6 +34,10 @@ namespace Kota_Palace
                 frag.SpazaClicked += Frag_SpazaClicked;
             }
             ConnectViews();
+            var id = Preferences.Get("Id", null);
+            FirebaseMessaging
+                .Instance
+                .SubscribeToTopic(id);
         }
 
         private void ConnectViews()
